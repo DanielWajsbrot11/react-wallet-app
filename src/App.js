@@ -49,9 +49,11 @@ const client = createClient({
 
 function App() {
   return (
-    <WagmiConfig client={client}>
-      <Profile />
-    </WagmiConfig>
+    <div className='home'>
+      <WagmiConfig client={client}>
+        <Profile />
+      </WagmiConfig>
+    </div>
   );
 }
 

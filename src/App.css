@@ -1,5 +1,8 @@
-.home{
+body{
   background-color: dimgrey;
+}
+.home{
+  
   border-radius: 1rem;
   padding: 1rem;
   margin: 1rem;
@@ -18,13 +21,15 @@
 }
 
 .disconnect-btn{
-  background-color: blueviolet;
+  background-color: #8a2be2;
   color: aliceblue;
   padding: 0.5rem;
   border-radius: 1rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  cursor: pointer;
 }
+
 .disconnect-btn:hover{
   background-color: aqua;
   color: blueviolet;
@@ -37,6 +42,7 @@
   border-radius: 1rem;
   border-width: thick;
   font-size: larger;
+  cursor: pointer;
 }
 
 .connect-btn:hover{
@@ -60,6 +66,7 @@
   border-radius: 1rem;
   padding: 0.5rem;
   margin: 0.5rem;
+  cursor: pointer;
 }
 
 .send-btn:hover{
@@ -73,4 +80,20 @@
   padding: 0.5rem;
   color: aliceblue;
   margin: 0.25rem;
+}
+
+.home{
+  padding: 3.5rem;
+}
+
+.converter{
+  width: 100%;
+}
+
+.wallet-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
 }

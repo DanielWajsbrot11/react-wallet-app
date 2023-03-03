@@ -19,13 +19,29 @@ export default function Profile() {
         if (isLoading) return <div>Fetching balance…</div>
         if (isError) return <div>Error fetching balance</div>
         return (
+            <div style={{textAlign:'center'}}>
+            <h1>Connected to {connector.name}</h1>
             <div className='home'>
-                <div>Connected to {connector.name}</div>
-                <div ><span className='bold'>Wallet Address:</span> {ensName ? `${ensName} (${address})` : address}</div>
-                <p><span className='bold'>Balance: </span> {data?.formatted} {data?.symbol}</p>
-                <div><SendTransaction/></div>
+                <div className='wallet-info'>
+                    <p><span className='bold'>Wallet Address:</span> {ensName ? `${ensName} (${address})` : address}</p>
+                    <p><span className='bold'>Balance: </span> {data?.formatted} {data?.symbol}</p>
+                    <SendTransaction/>
+                </div>
+                <div className='converter'>
+                <crypto-converter-widget
+                    live
+                    shadow
+                    symbol
+                    fiat="united-states-dollar"
+                    crypto="ethereum"
+                    amount="1"
+                    border-radius="0.60rem"
+                    background-color="#8a2be2"
+                    decimal-places="2"></crypto-converter-widget>
+                </div>
                 <br></br>
                 <button className='disconnect-btn' onClick={disconnect}>Disconnect</button>
+            </div>
             </div>
         )
     }
