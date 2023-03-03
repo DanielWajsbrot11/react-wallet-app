@@ -33,6 +33,7 @@ export default function SendTransaction() {
             e.preventDefault()
             sendTransaction?.()
         }}
+        className="form"
         >
         <input
             className='input'

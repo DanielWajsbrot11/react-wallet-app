@@ -22,7 +22,9 @@ const { chains, provider, webSocketProvider } = configureChains(
 const client = createClient({
   autoConnect: true,
   connectors: [
-    new MetaMaskConnector({ chains }),
+    new MetaMaskConnector({ 
+      chains
+    }),
     new CoinbaseWalletConnector({
       chains,
       options: {
@@ -47,14 +49,12 @@ const client = createClient({
   webSocketProvider,
 })
 
-function App() {
+export default function App() {
   return (
     <div className='home'>
-      <WagmiConfig client={client}>
-        <Profile />
-      </WagmiConfig>
+    <WagmiConfig client={client}>
+      <Profile />
+    </WagmiConfig>
     </div>
   );
 }
-
-export default App;

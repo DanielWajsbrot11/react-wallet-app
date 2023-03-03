@@ -2,8 +2,15 @@ body{
   background-color: dimgrey;
   overflow: hidden;
 }
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .home{
-  
   border-radius: 1rem;
   padding: 1rem;
   margin: 1rem;
@@ -31,9 +38,23 @@ body{
   cursor: pointer;
 }
 
+@media screen and (max-width: 500px) {
+  .disconnect-container{
+    width: 100%;
+  }
+  .disconnect-btn{
+    width: 100%;
+  }
+}
+
 .disconnect-btn:hover{
   background-color: aqua;
   color: blueviolet;
+  transform: scaleX(1.5) scaleY(1.5);
+  transition: ease-out;
+  scroll-behavior: smooth;
+  transition-duration: 2s;
+  font-size:xx-large;
 }
 
 .connect-btn{
@@ -59,6 +80,7 @@ body{
 .input{
   border-radius: 1rem;
   padding: 0.5rem;
+  width: 50%;
 }
 
 .send-btn{
@@ -90,11 +112,17 @@ body{
 .converter{
   width: 100%;
 }
+@media screen and (max-width: 500px) {
+  
+}
 
 .wallet-info{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+}
 
+.form{
+  width: 100%;
+  display: flex;
+  flex-direction: row; 
 }
